@@ -12,13 +12,10 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
-
-
-
-
-
-
-
+neg_labels = find(y == 0);
+pos_labels = find(y == 1);
+plot(X(pos_labels),'k+');
+plot(X(neg_labels),'ko');
 
 % =========================================================================
 

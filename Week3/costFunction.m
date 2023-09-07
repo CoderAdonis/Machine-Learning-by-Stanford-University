@@ -20,12 +20,14 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+z = X*theta;
+hypothesis = 1./(1.+e.^(-z));
 
+log_cost = y.*log(hypothesis) + (1-y).*log(1-hypothesis);
+J = -mean(log_cost);
 
-
-
-
-
+diff = hypothesis - y;
+grad = diff'*X/m;
 
 % =============================================================
 

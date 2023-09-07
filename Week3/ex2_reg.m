@@ -125,7 +125,7 @@ title(sprintf('lambda = %g', lambda))
 xlabel('Microchip Test 1')
 ylabel('Microchip Test 2')
 
-legend('y = 1', 'y = 0', 'Decision boundary')
+% legend('1', '0', 'Decision boundary')
 hold off;
 
 % Compute accuracy on our training set
